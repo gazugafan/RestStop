@@ -3,7 +3,7 @@
 
 RestStop gives you non-intrusive reminders to rest after you've worked continuously for awhile.
 
-<a href="https://github.com/gazugafan/RestStop/releases/latest" style="background:green;border:0px;border-radius:999px;padding:10px">Download Now!</a>
+[Download Now!](https://github.com/gazugafan/RestStop/releases/latest)
 ... and click "RestStopSetup.msi"
 
 ## Yet Another Break Reminder?
