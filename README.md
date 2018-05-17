@@ -3,6 +3,9 @@
 
 RestStop gives you non-intrusive reminders to rest after you've worked continuously for awhile.
 
+<a href="https://github.com/gazugafan/RestStop/releases/latest" style="background:green;border:0px;border-radius:999px;padding:10px">Download Now!</a>
+... and click "RestStopSetup.msi"
+
 ## Yet Another Break Reminder?
 There are lots of apps that do something like this already, but none of them are quite right.
 
@@ -24,13 +27,13 @@ RestStop puts an hourglass icon in your tray, and reminds you when it's time to 
 
 By default, rest stops are needed after 1 hour of continuous activity. After this, the hourglass will be depleted and appear completely empty. You'll also hear a calming bell toll. These are meant to be subtle indications that it's time to rest. You don't have to, though! There's nothing to dismiss, and nothing to stop you from working a bit more.
 
-Every 10 minutes after this, you'll get an extra reminder that your rest stop is overdue. A slightly less calming bell will toll, and the hourglass will slowly flash red. Again, these are not meant to disrupt your workÖ only to help you keep in mind that it's probably time for a break.
+Every 10 minutes after this, you'll get an extra reminder that your rest stop is overdue. A slightly less calming bell will toll, and the hourglass will slowly flash red. Again, these are not meant to disrupt your work‚Ä¶ only to help you keep in mind that it's probably time for a break.
 
-Once you're ready to restÖ just rest! Step away from the computer. Do some stretches. Grab some coffee. Whatever! As long as you're not active at the computer for at least 5 minutes, we'll consider you rested. Once you return from a rest and start using the computer again, we'll automatically reset your activity counter and start counting down to your next rest stop.
+Once you're ready to rest‚Ä¶ just rest! Step away from the computer. Do some stretches. Grab some coffee. Whatever! As long as you're not active at the computer for at least 5 minutes, we'll consider you rested. Once you return from a rest and start using the computer again, we'll automatically reset your activity counter and start counting down to your next rest stop.
 
-If you really need to, you can right click the tray icon and select ìI swear I'm rested!î to immediately reset your activity. This should only be used if your cat bumps your mouse while you're resting and throws us off. Even if your cat does do that, though, we allow up to 10 pixels of slight mouse movement before we consider you active. Key presses also count as activity.
+If you really need to, you can right click the tray icon and select ‚ÄúI swear I'm rested!‚Äù to immediately reset your activity. This should only be used if your cat bumps your mouse while you're resting and throws us off. Even if your cat does do that, though, we allow up to 10 pixels of slight mouse movement before we consider you active. Key presses also count as activity.
 
-Besides that, though, there's nothing to interact with and nothing to get in your wayÖ just subtle reminders to rest. If you'd like us to get in your way a little more, you can turn notifications on in the settings.
+Besides that, though, there's nothing to interact with and nothing to get in your way‚Ä¶ just subtle reminders to rest. If you'd like us to get in your way a little more, you can turn notifications on in the settings.
 
-If you want us to get in your way even more, like popping up a screen-filling STOP WORKING window in front of whatever you might be working on, then this isn't the app for you (check out Stretchly instead). We think doing that will just annoy you and cause you to eventually abandon the app altogether. And hey, sometimes you really do need to get stuff done and can't take a break. In those cases we'll just be down in the tray whispering in your earónot jumping in front of you and twisting your arm.
+If you want us to get in your way even more, like popping up a screen-filling STOP WORKING window in front of whatever you might be working on, then this isn't the app for you (check out Stretchly instead). We think doing that will just annoy you and cause you to eventually abandon the app altogether. And hey, sometimes you really do need to get stuff done and can't take a break. In those cases we'll just be down in the tray whispering in your ear‚Äînot jumping in front of you and twisting your arm.
 
