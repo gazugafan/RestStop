@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?define gazugafan.RestStop_TargetDir=$(var.gazugafan.RestStop.TargetDir)?>
+	<Product Id="277a969f-ecc6-4c80-bdc4-7bf202b73246" Name="RestStop" Language="1033" Version="1.0.0.0" Manufacturer="gazugafan" UpgradeCode="a59eeafd-a1f1-4233-bc99-c7ba8a1e9b88">
+		
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+		<UI>
+			<UIRef Id="WixUI_Minimal" />
+			<Publish Dialog="ExitDialog"
+				Control="Finish"
+				Event="DoAction"
+				Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+		</UI>
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Start RestStop Now" />
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX" Value="1"/>
+		
+		<Property Id="WixShellExecTarget" Value="[#RestStop.exe]" />
+		<CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+		
+		<Icon Id="icon.ico" SourceFile="..\gazugafan.RestStop\Icons\hourglassEmpty.ico" />
+		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+		
+		<WixVariable Id="WixUILicenseRtf" Value="..\license.rtf" />
+		
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="RestStop" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="Sounds_files" />
+			<ComponentRef Id="ApplicationShortcut" />
+			<ComponentGroupRef Id="Icons_files" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<DirectoryRef Id="ApplicationProgramsFolder">
+			<Component Id="ApplicationShortcut" Guid="0af417fc-7138-4cc1-ac14-3e73a67f62a2">
+				<Shortcut Icon="icon.ico" Id="ApplicationStartMenuShortcut" Name="RestStop" Description="RestStop" Target="[INSTALLFOLDER]RestStop.exe" WorkingDirectory="INSTALLFOLDER" />
+				<RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+				<RegistryValue Root="HKCU" Key="Software\RestStop" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+	
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="RestStop">
+					<Directory Id="Sounds" Name="Sounds" />
+					<Directory Id="Icons" Name="Icons" />
+				</Directory>
+				<Directory Id="ProgramMenuFolder">
+					<Directory Id="ApplicationProgramsFolder" Name="RestStop" />
+				</Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="RestStop.exe.config" Guid="3d580980-6a1f-49ab-b1c9-13db9bab7611">
+				<File Id="RestStop.exe.config" Name="RestStop.exe.config" Source="$(var.gazugafan.RestStop_TargetDir)RestStop.exe.config" />
+			</Component>
+			<Component Id="RestStop.exe" Guid="f261c1ed-e198-45e0-bcb7-4af67602c03e">
+				<File Id="RestStop.exe" Name="RestStop.exe" Source="$(var.gazugafan.RestStop_TargetDir)RestStop.exe" />
+			</Component>
+			<Component Id="about.bmp" Guid="9da60d05-b60f-4d9c-bc9f-56da54e8b25f">
+			  <File Id="about.bmp" Name="about.bmp" Source="$(var.gazugafan.RestStop_TargetDir)about.bmp" />
+			</Component>
+			<Component Id="about.txt" Guid="8bcfd2da-cbd0-4600-8071-93ad873a230c">
+			  <File Id="about.txt" Name="about.txt" Source="$(var.gazugafan.RestStop_TargetDir)about.txt" />
+			</Component>
+			<Component Id="help.rtf" Guid="6fb3a4bb-2e25-49e9-ba34-3c0ad59a73fe">
+			  <File Id="help.rtf" Name="help.rtf" Source="$(var.gazugafan.RestStop_TargetDir)help.rtf" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="Sounds_files" Directory="Sounds">
+			<Component Id="Sounds_Alert.wav" Guid="ae641359-295b-4e69-9b5a-4efcb7eb3a8b">
+				<File Id="Sounds_Alert.wav" Name="Alert.wav" Source="$(var.gazugafan.RestStop_TargetDir)Sounds\Alert.wav" />
+			</Component>
+			<Component Id="Sounds_Bell_Tones.wav" Guid="1077a581-5b8e-42cf-91e9-67ac4077dfe4">
+				<File Id="Sounds_Bell_Tones.wav" Name="Bell Tones.wav" Source="$(var.gazugafan.RestStop_TargetDir)Sounds\Bell Tones.wav" />
+			</Component>
+			<Component Id="Sounds_Ding_Ding.wav" Guid="8655668e-142c-41e3-a813-e05c96f54bc1">
+				<File Id="Sounds_Ding_Ding.wav" Name="Ding Ding.wav" Source="$(var.gazugafan.RestStop_TargetDir)Sounds\Ding Ding.wav" />
+			</Component>
+			<Component Id="Sounds_Gong.wav" Guid="0477d026-a177-4580-bc11-0e04f4084df2">
+				<File Id="Sounds_Gong.wav" Name="Gong.wav" Source="$(var.gazugafan.RestStop_TargetDir)Sounds\Gong.wav" />
+			</Component>
+			<Component Id="Sounds_Hand_Bell.wav" Guid="6cd2245d-4104-443e-80ee-f4b54542ade1">
+				<File Id="Sounds_Hand_Bell.wav" Name="Hand Bell.wav" Source="$(var.gazugafan.RestStop_TargetDir)Sounds\Hand Bell.wav" />
+			</Component>
+			<Component Id="Sounds_Standing_Bell.wav" Guid="8f952c1c-7592-4f7b-a5d3-4f8c45670240">
+				<File Id="Sounds_Standing_Bell.wav" Name="Standing Bell.wav" Source="$(var.gazugafan.RestStop_TargetDir)Sounds\Standing Bell.wav" />
+			</Component>
+			<Component Id="Sounds_Wind_Toll.wav" Guid="bfec88a1-9dd7-4dc8-b251-9670b778d6e4">
+				<File Id="Sounds_Wind_Toll.wav" Name="Wind Toll.wav" Source="$(var.gazugafan.RestStop_TargetDir)Sounds\Wind Toll.wav" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+	<Fragment>
+	  <ComponentGroup Id="Icons_files" Directory="Icons">
+	    <Component Id="Icons_hourglass1.ico" Guid="aa8d415b-e27d-4b07-8311-54813c695423">
+	      <File Id="Icons_hourglass1.ico" Name="hourglass1.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass1.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass10.ico" Guid="d40ba856-b24c-4936-a76e-a7b0775c9efb">
+	      <File Id="Icons_hourglass10.ico" Name="hourglass10.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass10.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass2.ico" Guid="99fa5072-47e7-4385-878d-974d6d2295a1">
+	      <File Id="Icons_hourglass2.ico" Name="hourglass2.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass2.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass3.ico" Guid="5ec594e3-0a00-4798-b8ae-7d57f874bb79">
+	      <File Id="Icons_hourglass3.ico" Name="hourglass3.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass3.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass4.ico" Guid="92379bc6-0f74-4e65-bcae-28fd742f713f">
+	      <File Id="Icons_hourglass4.ico" Name="hourglass4.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass4.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass5.ico" Guid="2eb57a5d-228a-4dd3-b4e8-5a0318a68907">
+	      <File Id="Icons_hourglass5.ico" Name="hourglass5.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass5.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass6.ico" Guid="4ea03b4c-fdea-4e3d-adcd-92f900332bf0">
+	      <File Id="Icons_hourglass6.ico" Name="hourglass6.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass6.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass7.ico" Guid="174fac65-e0f4-42c0-8c8e-b6411378492a">
+	      <File Id="Icons_hourglass7.ico" Name="hourglass7.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass7.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass8.ico" Guid="a9e6d074-67b1-404a-86e1-b6ac8739f0de">
+	      <File Id="Icons_hourglass8.ico" Name="hourglass8.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass8.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglass9.ico" Guid="26386f2f-f1ee-4866-b0dc-abf1ec8c5cc7">
+	      <File Id="Icons_hourglass9.ico" Name="hourglass9.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglass9.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglassEmpty.ico" Guid="e9b82355-2cf6-4612-93de-b76bd30be706">
+	      <File Id="Icons_hourglassEmpty.ico" Name="hourglassEmpty.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglassEmpty.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglassFull.ico" Guid="caf79cab-477c-445c-9583-c0ce4efb213f">
+	      <File Id="Icons_hourglassFull.ico" Name="hourglassFull.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglassFull.ico" />
+	    </Component>
+	    <Component Id="Icons_hourglassRed.ico" Guid="ad1ce788-8e63-4e03-8db4-274bb9f0eb85">
+	      <File Id="Icons_hourglassRed.ico" Name="hourglassRed.ico" Source="$(var.gazugafan.RestStop_TargetDir)Icons\hourglassRed.ico" />
+	    </Component>
+	  </ComponentGroup>
+	</Fragment>
+</Wix>

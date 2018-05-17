@@ -1,0 +1,12 @@
+Debug
+Release
+bin
+doc
+obj
+publish
+*.DotSettings*
+*.[Cc]ache
+*.[Rr]e[Ss]harper
+*.[Rr]e[Ss]harper.user
+*.csproj.user
+*.suo
