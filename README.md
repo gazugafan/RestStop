@@ -3,8 +3,11 @@
 
 RestStop gives you non-intrusive reminders to rest after you've worked continuously for awhile.
 
-[Download Now!](https://github.com/gazugafan/RestStop/releases/latest)
-... and click "RestStopSetup.msi"
+## Install [![Github All Releases](https://img.shields.io/github/downloads/gazugafan/RestStop/total.svg)](https://github.com/gazugafan/RestStop/releases/latest)
+
+[Download the latest release here](https://github.com/gazugafan/RestStop/releases/latest)
+
+...click "RestStopSetup.msi" and run it.
 
 ## Yet Another Break Reminder?
 There are lots of apps that do something like this already, but none of them are quite right.
