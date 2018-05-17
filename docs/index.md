@@ -39,4 +39,3 @@ If you really need to, you can right click the tray icon and select “I swear I'm
 Besides that, though, there's nothing to interact with and nothing to get in your way… just subtle reminders to rest. If you'd like us to get in your way a little more, you can turn notifications on in the settings.
 
 If you want us to get in your way even more, like popping up a screen-filling STOP WORKING window in front of whatever you might be working on, then this isn't the app for you (check out Stretchly instead). We think doing that will just annoy you and cause you to eventually abandon the app altogether. And hey, sometimes you really do need to get stuff done and can't take a break. In those cases we'll just be down in the tray whispering in your ear—not jumping in front of you and twisting your arm.
-
