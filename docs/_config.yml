@@ -1,6 +1,6 @@
 theme: jekyll-theme-midnight
 encoding: UTF-8
-show_downloads: true
+show_downloads: false
 avatar: https://raw.githubusercontent.com/gazugafan/reststop/master/docs/about.png
 footer-links:
   dribbble:
