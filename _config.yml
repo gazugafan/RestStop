@@ -1,3 +1,18 @@
 theme: jekyll-theme-midnight
 encoding: UTF-8
 show_downloads: true
+avatar: https://raw.githubusercontent.com/gazugafan/reststop/master/docs/about.png
+footer-links:
+  dribbble:
+  email:
+  facebook:
+  flickr:
+  github: gazugafan/reststop
+  instagram:
+  linkedin:
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  twitter: gazugafan
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
