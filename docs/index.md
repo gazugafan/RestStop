@@ -20,13 +20,13 @@ Every 10 minutes after this, you'll get an extra reminder that your rest stop is
 
 Once you're ready to rest... just rest! Step away from the computer. Do some stretches. Grab some coffee. Whatever! As long as you're not active at the computer for at least 5 minutes, we'll consider you rested. Once you return from a rest and start using the computer again, we'll automatically reset your activity counter and start counting down to your next rest stop.
 
-If you really need to, you can right click the tray icon and select “I swear I'm rested!” to immediately reset your activity. This should only be used if your cat bumps your mouse while you're resting and throws us off. Even if your cat does do that, though, we allow up to 10 pixels of slight mouse movement before we consider you active. Key presses also count as activity.
+If you really need to, you can right click the tray icon and select "I swear I'm rested!" to immediately reset your activity. This should only be used if your cat bumps your mouse while you're resting and throws us off. Even if your cat does do that, though, we allow up to 10 pixels of slight mouse movement before we consider you active. Key presses also count as activity.
 
 <img src="https://raw.githubusercontent.com/gazugafan/reststop/master/docs/settings.png" align="right">
 
 Besides that, though, there's nothing to interact with and nothing to get in your way... just subtle reminders to rest. If you'd like us to get in your way a little more, you can turn notifications on in the settings.
 
-If you want us to get in your way even more, like popping up a screen-filling STOP WORKING window in front of whatever you might be working on, then this isn't the app for you (check out Stretchly instead). We think doing that will just annoy you and cause you to eventually abandon the app altogether. And hey, sometimes you really do need to get stuff done and can't take a break. In those cases we'll just be down in the tray whispering in your ear—not jumping in front of you and twisting your arm.
+If you want us to get in your way even more, like popping up a screen-filling STOP WORKING window in front of whatever you might be working on, then this isn't the app for you (check out Stretchly instead). We think doing that will just annoy you and cause you to eventually abandon the app altogether. And hey, sometimes you really do need to get stuff done and can't take a break. In those cases we'll just be down in the tray whispering in your ear--not jumping in front of you and twisting your arm.
 
 
 ## Install [![Github All Releases](https://img.shields.io/github/downloads/gazugafan/RestStop/total.svg)](https://github.com/gazugafan/RestStop/releases/latest)
